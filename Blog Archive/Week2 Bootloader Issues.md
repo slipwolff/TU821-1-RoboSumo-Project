@@ -1,7 +1,7 @@
 While working on the motor controller and experimenting with PWM for motor control, I have managed to accidentally corrupt the bootloader on the arduino. This article will cover my solution to the problem that has aroused.
 
 ## Symptoms of a corrupted bootloader
-The most common thing that will clearly indicate a corrupt bootloader would be erratic behaviour of the Arduino IDE (AVRdude throws up errors after sucessfully uploading a sketch, AVRdude loses the communication with the Arduino midway, etc.).
+The most common thing that will clearly indicate a corrupt bootloader would be erratic behaviour of the Arduino IDE (AVRdude throws up errors after successfully uploading a sketch, AVRdude loses the communication with the Arduino midway, etc.).
 
 ## Corrupted bootloader? How?
 There are multiple reasons why a bootloader on an arduino may become corrupted. Usually this is not a major worry as a corrupted bootloader is a relatively low occurrence. However, the following actions may increase your chance of corrupting your bootloader:
