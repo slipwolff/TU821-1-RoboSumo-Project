@@ -1,11 +1,12 @@
 /*
- * LED Flash Challenge
- *
+ * LED Flash Challenge Code
+ * Author: Tomasz J. Huczek
+ * This code is licensed under the MIT License, please see LICENSE.txt for information.
  * Note 1: 1 segment = 500 milliseconds
 */
 
 // Setup arduino pins
- void setup() {
+void setup() {
     pinMode(2, OUTPUT); // 0 LED
     pinMode(3, OUTPUT); // 1 LED
 
