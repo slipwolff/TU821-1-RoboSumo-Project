@@ -19,14 +19,14 @@ ICSP header on an Arduino Nano
 
 Alternatively the following pins can be connected together and will mimic the functionality of the ICSP header (useful when female jumper wires are not available):
 
-| **Target Arduino** | **Programming Arduino** |
-|:------------------:|:-----------------------:|
-|         5V         |           5V            |
-|        GND         |           GND           |
-|       RESET        |           D10           |
-|        D11         |           D11           |
-|        D12         |           D12           |
-|        D13         |           D13           |
+| **Programming Arduino** | **Target Arduino** |
+|:-----------------------:|:------------------:|
+|           5V            |         5V         |
+|           GND           |        GND         |
+|           D10           |       RESET        |
+|           D11           |        D11         |
+|           D12           |        D12         |
+|           D13           |        D13         |
 
 ## Flashing the bootloader
 Once the two arduinos are connected together (assuming you are using an arduino as an ISP programmer) you must flash the ArduinoISP sketch onto your programming arduino. This sketch can be found in `Files→Examples→11.ArduinoISP→ArduinoISP`. Once this sketch is flashed to your programming arduino, you must carefully proceed with the next few steps. Go to Tools and **MAKE SURE** that the board type matches your target board. Once this is checked, change the programmer setting from `AVRISP mkII` to `Arduino as ISP`. After this click burn bootloader and wait for the process to finish. After the bootloader is burned, congratulations you have repaired your arduino bootloader. After re-flashing of the bootloader, you should always load up a sample piece of code (the sample blink sketch provided in the Arduino IDE should suffice).
@@ -39,4 +39,5 @@ In the end I have managed to fix the bootloader on my arduino and successfully w
 
 ## Sources referenced for this article
 [Arduino Support - Burn the bootloader on UNO, Mega, and classic Nano using another Arduino ](https://support.arduino.cc/hc/en-us/articles/4841602539164-Burn-the-bootloader-on-UNO-Mega-and-classic-Nano-using-another-Arduino)
+
 [USBasp - USB programmer for Atmel AVR controllers](https://www.fischl.de/usbasp/)
