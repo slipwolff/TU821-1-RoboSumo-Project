@@ -1,12 +1,14 @@
 While working on the motor controller and experimenting with PWM for motor control, I have managed to accidentally corrupt the bootloader on the arduino. This article will cover my solution to the problem that has aroused.
 
+## Symptoms of a corrupted bootloader
+The most common thing that will clearly indicate a corrupt bootloader would be erratic behaviour of the Arduino IDE (AVRdude throws up errors after sucessfully uploading a sketch, AVRdude loses the communication with the Arduino midway, etc.).
+
 ## Corrupted bootloader? How?
 There are multiple reasons why a bootloader on an arduino may become corrupted. Usually this is not a major worry as a corrupted bootloader is a relatively low occurrence. However, the following actions may increase your chance of corrupting your bootloader:
 - Using a damaged USB cable or having a USB cable with a loose connection (this was my case)
 - Forcibly flashing the wrong bootloader for the board (e.g. uploading an Arduino Leonardo bootloader to an Arduino Uno)
 - Being a total maniac and uploading the code with a second arduino or a USBasp adapter via the ICSP pins or worse, directly using pins D11, D12 and D13
 
-## Symptoms of a corrupted bootloader
 
 
 Whatever your reason may be, and you have ended up with a corrupt bootloader, note that this is not the end of the world and your arduino may still be saved.
